@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+
+*{
+font-family: 'Mohave', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #8991D2;
+    
+    transition: .5s;
+}
+a:hover{
+    color:#1B30DF ;
+}
