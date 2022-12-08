@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { Card } from "../../components/Card";
 import { NavBar } from "../../components/NavBar";
 
+import "./Movies.scss"
+
 const moviesUrl = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 export function MoviesPage() {
@@ -29,27 +31,29 @@ export function MoviesPage() {
 
 
     return (
-        <div className="details">
+        <div>
             <NavBar />
+            <div className="details">
             {movies && (
-                <> <Card movie={movies} showLink={false} />
-                    <p>{movies.tagline}</p>
-                    <h3>Orçamento: U
+                    <> <Card movie={movies} showLink={true} />
+                        <p className="details__tagline">{movies.tagline}</p>
+                        <h3 className="details__info">Orçamento: U
                         {formatCurrency(movies.budget)}
                     </h3>
-                    <h3>Receita: U
+                        <h3 className="details__info">Receita: U
                         {formatCurrency(movies.revenue)}
+                        </h3 >
+                        <h3 className="details__info">Duração: {movies.runtime} minutos
+                        </h3 >
+                        <h3 className="details__info">Data de estreia : {movies.release_date}
                     </h3>
-                    <h3>Duração: {movies.runtime} minutos
-                    </h3>
-                    <h3>Descrição: {movies.overview}
-                    </h3>
-                    <h3>Data de estreia : {movies.release_date}
+                        <h3 className="details__description">Descrição: {movies.overview}
                     </h3>
 
 
                 </>
             )}
+        </div>
         </div>
     )
 }

@@ -1,0 +1,30 @@
+.details{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+    card{
+        text-align: center;
+    }
+    &__description{
+        line-height: 2rem;
+    }
+    &__tagline{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        
+    }
+    &__info{
+        margin-bottom: 1.5rem;
+
+        h3{
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+}
+

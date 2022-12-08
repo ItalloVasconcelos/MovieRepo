@@ -24,7 +24,7 @@ export function HomePage() {
                 <div className="movie__container">
                     {topMovies.lenght === 0 && "Carregando..."}
                     {topMovies.length > 0 && topMovies.map((movie: any) =>
-                        <Card movie={movie} showLink={true} />
+                        <Card movie={movie} key={movie.id} showLink={true} />
                     )}
             </div>
         </div>

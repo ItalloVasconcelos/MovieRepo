@@ -5,7 +5,7 @@ import "./Card.scss"
 const imgUrl = import.meta.env.VITE_IMG;
 type TCardProps = {
     movie: any
-    showLink: boolean
+    showLink?: boolean
 }
 
 export function Card(props: TCardProps) {
